@@ -71,3 +71,10 @@ Fuzzy file, buffer, mru and tag finder:
 * `<C-y>` to create a new file and its parent directories
 * `<c-z>` to mark/unmark multiple files and <c-o> to open them
 
+# Inspiration
+
+- [spf13-vim](https://github.com/spf13/spf13-vim)
+- [janus](https://github.com/carlhuda/janus)
+- [bling](https://github.com/bling/dotvim)
+- [astrails](https://github.com/astrails/dotvim)
+- [thoughtbot](https://robots.thoughtbot.com/tags/vim)'s posts
