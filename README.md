@@ -51,7 +51,23 @@ Here're some tips in case you've never used VIM before:
 Tiled Window Management for Vim:
 
 * C-d Creates a new window and place it in the master pane [M] & stacks all previous windows in the stacked pane [S]
-* C-d Close the current window if no unsaved changes
-* C-j Jumps to next window (clockwise)
-* C-j Jumps to previous window (anti-clockwise)
-* C-Space Focus the current window, that is, place it in the master pane [M] & stacks all other windows in the stacked pane [S]
+* <C-d> Close the current window if no unsaved changes
+* <C-j> Jumps to next window (clockwise)
+* <C-j> Jumps to previous window (anti-clockwise)
+* <C-Space> Focus the current window, that is, place it in the master pane [M] & stacks all other windows in the stacked pane [S]
+
+### [CtrlP](https://github.com/kien/ctrlp.vim)
+
+Fuzzy file, buffer, mru and tag finder:
+
+* <C-p> invokes CtrlP  
+* <F5> to purge the cache for the current directory to get new files, remove deleted files and apply new ignore options.
+* <C-f> and <C-b> to cycle between modes.
+* <C-d> to switch to filename only search instead of full path.
+* <C-r> to switch to regexp mode.
+* Cc-j>, <C-k> or the arrow keys to navigate the result list.
+* <c-t> or <C-v>, <C-x> to open the selected entry in a new tab or in a new split.
+* <C-n>, <C-p> to select the next/previous string in the prompt's history.
+* <C-y> to create a new file and its parent directories.
+Use <c-z> to mark/unmark multiple files and <c-o> to open them.
+
