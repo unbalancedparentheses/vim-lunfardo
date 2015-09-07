@@ -1,0 +1,384 @@
+" try not to put any lines in your vimrc that you don't understand
+
+" general
+"--------
+call plug#begin('~/.vim/plugged')
+
+let s:settings = {}
+
+if has('lua') || has("patch-7.3-885")
+  let s:settings.autocomplete_method = 'neocomplete'
+else
+  let s:settings.autocomplete_method = 'neocomplcache'
+endif
+
+" basic settings
+"---------------
+
+scriptencoding utf-8
+
+" disable strange vi defaults
+set nocompatible
+
+" for regular expressions turn magic on
+set magic
+
+" search as characters are entered
+set incsearch
+" highlight matches
+set hlsearch
+
+" cursor can be positioned where there is no actual character
+set virtualedit=onemore
+
+set history=1000
+" allow buffer switching without saving
+set hidden
+
+" automatically enable mouse usage
+set mouse=a
+" hide the mouse cursor while typing
+set mousehide
+
+" yank and paste with the system clipboard
+set clipboard=unnamedplus
+
+set tabpagemax=50
+
+set more
+
+" no backups, please
+set nobackup
+" only in case you don't want a backup file while editing
+set nowritebackup
+" no swap files
+set noswapfile
+
+" good defaults
+Plug 'tpope/vim-sensible'
+
+" bindings
+"---------
+
+" leader
+set notimeout
+set ttimeout
+set ttimeoutlen=10
+
+" space is the new leader
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
+
+" save file
+nnoremap <Leader>w :w<CR>
+
+" quit
+nnoremap <Leader>q :q<CR>
+
+" save and quit
+nnoremap <Leader>x :x<CR>
+
+" type commands more easily
+" ',' can be typed directly without shift
+noremap , :
+
+" exit insert mode with jk
+inoremap jk <esc>
+inoremap kj <esc>
+
+" pairs of handy bracket mappings
+Plug 'tpope/vim-unimpaired'
+
+set pastetoggle=<F2>
+
+nmap <c-up> [e
+nmap <c-down> ]e
+vmap <c-down> ]egv
+vmap <c-up> [egv
+
+" readline key bindings
+Plug 'tpope/vim-rsi'
+
+" provides a much simpler way to use some motions
+Plug 'Lokaltog/vim-easymotion'
+
+" get to any word on a line in two or three keystrokes
+" with mainly f{char} (which moves your cursor to {char})
+Plug 'unblevable/quick-scope'
+
+" smooth scroll
+Plug 'terryma/vim-smooth-scroll'
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 8)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 8)<CR>
+
+" window management like dwm
+Plug 'spolu/dwm.vim'
+
+" tabs and indentation
+"---------------------
+
+" number of visual spaces per TAB
+set tabstop=2
+" number of spaces in tab when editing
+set softtabstop=2
+" turn <TAB>s into spaces
+set expandtab
+" number of spaces to add when  you press >>, << or ==
+set shiftwidth=2
+" automatically inserts one extra level of indentation in some cases, and works for C-like files.
+set autoindent
+
+" load filetype-specific indent files and
+" also enable language-dependent indenting
+if has('autocmd')
+  filetype plugin indent on
+endif
+
+" disable folding
+set nofoldenable
+
+" automatically adjusts shiftwidth and expandtab heuristically based on the current file
+Plug 'tpope/vim-sleuth'
+
+" display the indention levels with thin vertical lines
+Plug 'Yggdroot/indentLine'
+
+if has("patch-7.4-338")
+  set breakindent
+  set showbreak=↪
+endif
+
+"  user interface
+"----------------
+
+" redraw only when we need to
+set lazyredraw
+" fast terminal
+set ttyfast
+" show command in bottom bar
+set showcmd
+" highlight current line
+set cursorline
+" show matching brackets when text indicator is over them
+set showmatch
+" how many tenths of a second to blink when matching brackets
+set matchtime=2
+
+" visual autocomplete for command menu
+set wildmenu
+" bash tab style completion is awesome
+set wildmode=longest,list
+" tab completion key
+set wildchar=<tab>
+
+" disables beep and flash
+" vim needs to have visualbell set
+" and what to do when flashing, t_vb config, set to empty
+set noerrorbells
+set visualbell
+set t_vb=
+
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
+
+" ignore whitespace changes
+set diffopt+=iwhite
+
+" always show status bar
+set laststatus=2
+" lean and mean status/tabline for vim that's light as air
+Plug 'itchyny/lightline.vim'
+
+" core
+"------
+
+Plug 'mhinz/vim-startify'
+let g:startify_session_dir = "~/.vim/sessions"
+let g:startify_change_to_vcs_root = 1
+let g:startify_show_sessions = 1
+nnoremap <F1> :Startify<cr>
+
+" kick off builds and test suites using one of several asynchronous adapters
+Plug 'tpope/vim-dispatch'
+
+" sugar for the UNIX shell commands that need it the most
+Plug 'tpope/vim-eunuch'
+
+" highlight unwanted whitespace
+Plug 'ntpeters/vim-better-whitespace'
+
+" v to expand the visual selection and C-v to shrink it.
+Plug 'terryma/vim-expand-region'
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+Plug 'terryma/vim-multiple-cursors'
+let g:multi_cursor_next_key='<C-d>'
+
+" display your undo history in a graph
+Plug 'mbbill/undotree'
+nnoremap <Leader>u :UndotreeToggle<cr>
+
+if has('persistent_undo')
+  " where to save undo histories
+  set undodir=$HOME/.vim/undo
+  " so is persistent undo
+  set undofile
+  " maximum number of changes that can be undone
+  set undolevels=1000
+  " maximum number lines to save for undo on a buffer reload
+  set undoreload=10000
+endif
+
+Plug 'tpope/vim-commentary'
+
+Plug 'chrisbra/NrrwRgn'
+
+Plug 'junegunn/vim-easy-align'
+
+Plug 'ervandew/supertab'
+
+Plug 'scrooloose/nerdtree'
+map <Leader>e :NERDTreeToggle<CR>
+
+" enable repeating supported plugin maps with "."
+Plug 'tpope/vim-repeat'
+
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+" editing
+"--------
+
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
+" backspace for dummies
+set backspace=indent,eol,start
+
+" always autosave everything
+:au FocusLost * silent! wa
+set autowrite
+
+" autoread file on change
+set autoread
+
+" relative or absolute line numbering depending on the mode
+Plug 'myusuf3/numbers.vim'
+
+" extended % matching for HTML, LaTeX, and many other languages
+Plug 'tmhedberg/matchit'
+
+" quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
+
+" insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'
+
+" editorconfig define and maintain consistent coding styles between different editors and IDEs
+Plug 'editorconfig/editorconfig-vim'
+
+" helps to end certain structures automatically
+" for example in Ruby, this means adding end after if, do, def and several other keywords.
+Plug 'tpope/vim-endwise'
+
+Plug 'thinca/vim-visualstar'
+
+" unite
+"------
+
+Plug 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+" git
+"----
+
+" vim git interface
+Plug 'tpope/vim-fugitive'
+
+" git diff in each line
+Plug 'airblade/vim-gitgutter'
+
+" gist
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
+
+" languages
+"-----------
+
+" enable syntax processing
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable
+endif
+
+" check for errors
+Plug 'scrooloose/syntastic'
+if exists(":SyntasticInfo")
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+endif
+
+" python
+Plug 'klen/python-mode'
+
+" javascript
+Plug 'pangloss/vim-javascript'
+
+" ruby
+Plug 'vim-ruby/vim-ruby'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-rails'
+
+" json
+Plug 'elzr/vim-json'
+
+" markdown
+Plug 'plasticboy/vim-markdown'
+
+" html
+Plug 'rstacruz/sparkup'
+
+" autocomplete
+"-------------
+
+if s:settings.autocomplete_method == 'neocomplete'
+  Plug 'honza/vim-snippets'
+  Plug 'Shougo/neosnippet-snippets'
+  Plug 'Shougo/neosnippet.vim'
+
+  Plug 'Shougo/neocomplete.vim'
+  let g:neocomplete#enable_at_startup = 1
+  let g:neocomplete#data_directory = '~/.vim/cache/plugins/neocomplete'
+
+elseif s:settings.autocomplete_method == 'neocomplcache'
+  Plug 'honza/vim-snippets'
+  Plug 'Shougo/neosnippet-snippets'
+  Plug 'Shougo/neosnippet.vim'
+
+  Plug 'Shougo/neocomplcache.vim'
+  let g:neocomplcache_enable_at_startup = 1
+  let g:neocomplcache_temporary_dir = '~/.vim/cache/plugins/neocomplete'
+  let g:neocomplcache_enable_fuzzy_completion = 1
+endif
+
+" colorschemes
+"-------------
+
+Plug 'christophermca/meta5'
+Plug 'sjl/badwolf'
+Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
+Plug 'notpratheek/vim-luna'
+
+call plug#end()
+
+silent! colorscheme Tomorrow-Night 
