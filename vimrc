@@ -149,7 +149,7 @@ nnoremap <F1> :Startify<cr>
 
 " Fuzzy file, buffer, mru, tag, etc finder
 Plug 'kien/ctrlp.vim'
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlPMixed'
 
 " list, select and switch between buffers
