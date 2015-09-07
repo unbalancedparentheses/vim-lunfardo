@@ -60,7 +60,7 @@ Tiled Window Management for Vim:
 
 Fuzzy file, buffer, mru and tag finder:
 
-* `<C-p>` invokes CtrlP  
+* `<Space-p>` invokes CtrlP  
 * `<F5>` to purge the cache for the current directory to get new files, remove deleted files and apply new ignore options
 * `<C-f>` and `<C-b>` to cycle between modes
 * `<C-d>` to switch to filename only search instead of full path
