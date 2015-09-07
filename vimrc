@@ -193,11 +193,17 @@ Plug 'itchyny/lightline.vim'
 " core
 "------
 
+" fancy start screen
 Plug 'mhinz/vim-startify'
 let g:startify_session_dir = "~/.vim/sessions"
 let g:startify_change_to_vcs_root = 1
 let g:startify_show_sessions = 1
 nnoremap <F1> :Startify<cr>
+
+" Fuzzy file, buffer, mru, tag, etc finder
+Plug 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 " kick off builds and test suites using one of several asynchronous adapters
 Plug 'tpope/vim-dispatch'
@@ -213,6 +219,7 @@ Plug 'terryma/vim-expand-region'
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
+" sublime style multiple selections for vim
 Plug 'terryma/vim-multiple-cursors'
 let g:multi_cursor_next_key='<C-d>'
 
@@ -231,32 +238,28 @@ if has('persistent_undo')
   set undoreload=10000
 endif
 
+" comment and uncomment
 Plug 'tpope/vim-commentary'
 
+" plugin for focussing on a selected region
 Plug 'chrisbra/NrrwRgn'
 
+" vim alignment plugin
 Plug 'junegunn/vim-easy-align'
 
-Plug 'ervandew/supertab'
-
+" tree explorer
 Plug 'scrooloose/nerdtree'
 map <Leader>e :NERDTreeToggle<CR>
 
-" enable repeating supported plugin maps with "."
+" enable repeating supported plugin maps with .
 Plug 'tpope/vim-repeat'
 
+" colors for paris of {}, (), []
 Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+let g:rainbow_active = 1
 
 " editing
 "--------
-
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
-
-" backspace for dummies
-set backspace=indent,eol,start
 
 " always autosave everything
 :au FocusLost * silent! wa
@@ -264,6 +267,16 @@ set autowrite
 
 " autoread file on change
 set autoread
+
+" make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
+" backspace for dummies
+set backspace=indent,eol,start
+
+" editorconfig define and maintain consistent coding styles between different editors and IDEs
+Plug 'editorconfig/editorconfig-vim'
 
 " relative or absolute line numbering depending on the mode
 Plug 'myusuf3/numbers.vim'
@@ -277,21 +290,11 @@ Plug 'tpope/vim-surround'
 " insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
-" editorconfig define and maintain consistent coding styles between different editors and IDEs
-Plug 'editorconfig/editorconfig-vim'
-
 " helps to end certain structures automatically
 " for example in Ruby, this means adding end after if, do, def and several other keywords.
 Plug 'tpope/vim-endwise'
 
 Plug 'thinca/vim-visualstar'
-
-" unite
-"------
-
-Plug 'kien/ctrlp.vim'
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMixed'
 
 " git
 "----
@@ -348,6 +351,9 @@ Plug 'rstacruz/sparkup'
 
 " autocomplete
 "-------------
+
+" perform all your vim insert mode completions with tab
+Plug 'ervandew/supertab'
 
 if s:settings.autocomplete_method == 'neocomplete'
   Plug 'honza/vim-snippets'
