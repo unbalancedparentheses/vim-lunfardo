@@ -1,16 +1,7 @@
 " try not to put any lines in your vimrc that you don't understand
 
-" general
-"--------
+" call plug plugin manager
 call plug#begin('~/.vim/plugged')
-
-let s:settings = {}
-
-if has('lua') || has("patch-7.3-885")
-  let s:settings.autocomplete_method = 'neocomplete'
-else
-  let s:settings.autocomplete_method = 'neocomplcache'
-endif
 
 " basic settings
 "---------------
@@ -360,25 +351,25 @@ Plug 'rstacruz/sparkup'
 " perform all your vim insert mode completions with tab
 Plug 'ervandew/supertab'
 
-if s:settings.autocomplete_method == 'neocomplete'
-  Plug 'honza/vim-snippets'
-  Plug 'Shougo/neosnippet-snippets'
-  Plug 'Shougo/neosnippet.vim'
-
+if has('lua') || has("patch-7.3-885")
   Plug 'Shougo/neocomplete.vim'
   let g:neocomplete#enable_at_startup = 1
   let g:neocomplete#data_directory = '~/.vim/cache/plugins/neocomplete'
-
-elseif s:settings.autocomplete_method == 'neocomplcache'
-  Plug 'honza/vim-snippets'
-  Plug 'Shougo/neosnippet-snippets'
-  Plug 'Shougo/neosnippet.vim'
-
+else
   Plug 'Shougo/neocomplcache.vim'
   let g:neocomplcache_enable_at_startup = 1
-  let g:neocomplcache_temporary_dir = '~/.vim/cache/plugins/neocomplete'
+  let g:neocomplcache_temporary_dir = '~/.vim/cache/plugins/neocomplcache'
   let g:neocomplcache_enable_fuzzy_completion = 1
 endif
+
+" snippets files for various programming languages
+Plug 'honza/vim-snippets'
+
+" adds snippet support
+Plug 'Shougo/neosnippet.vim'
+" neosnippet snippets
+Plug 'Shougo/neosnippet-snippets'
+
 
 " colorschemes
 "-------------
