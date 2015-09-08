@@ -373,6 +373,11 @@ Plug 'honza/vim-snippets'
 
 " adds snippet support
 Plug 'Shougo/neosnippet.vim'
+let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
 " neosnippet snippets
 Plug 'Shougo/neosnippet-snippets'
 
@@ -389,4 +394,4 @@ Plug 'notpratheek/vim-luna'
 
 call plug#end()
 
-silent! colorscheme Tomorrow-Night 
+silent! colorscheme Tomorrow-Night
