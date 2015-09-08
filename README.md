@@ -71,6 +71,17 @@ Fuzzy file, buffer, mru and tag finder:
 * `<C-y>` to create a new file and its parent directories
 * `<c-z>` to mark/unmark multiple files and <c-o> to open them
 
+### [fugitive](http://github.com/tpope/vim-fugitive)
+
+A Git wrapper so awesome, it should be illegal:
+
+* `<leader>gb` maps to :Gblame<CR>
+* `<leader>gs` maps to :Gstatus<CR>
+* `<leader>gd` maps to :Gdiff<CR>
+* `<leader>gl` maps to :Glog<CR>
+* `<leader>gc` maps to :Gcommit<CR>
+* `<leader>gp` maps to :Git push<CR>
+
 # Inspiration
 
 - [spf13-vim](https://github.com/spf13/spf13-vim)
