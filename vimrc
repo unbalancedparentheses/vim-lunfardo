@@ -299,10 +299,8 @@ set diffopt+=iwhite
 " always show status bar
 set laststatus=2
 " lean and mean status/tabline for vim that's light as air
-Plug 'itchyny/lightline.vim'
+Plug  'bling/vim-airline'
 
-" editor
-"------
 " git
 "----
 
