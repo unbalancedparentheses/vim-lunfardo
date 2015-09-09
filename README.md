@@ -77,6 +77,30 @@ Buffergator is a plugin for listing, navigating between, and selecting buffers t
 
 Selected buffers can be "previewed", i.e. opened in a window or tab page, but with focus remaining in the buffer catalog. Even better, you can "walk" up and down the list of buffers shown in the catalog by using <C-N> (or <SPACE>) / <C-P> (or <C-SPACE>). These keys select the next/previous buffer in succession, respectively, opening it for preview without leaving the buffer catalog viewer.
 
+### [Autocomplete]
+
+If your vim has lua enabled and the patch version is bigger than patch-7.3-885
+then [neocomplete](https://github.com/Shougo/neocomplete.vim) is used.
+
+If your vim hasn't lua enabled then
+[neocomplcache](https://github.com/Shougo/neocomplcache.vim) is used.
+
+* `<Tab>` autocompletes
+
+### [Snippets]
+
+If your vim has python enabled then
+[ultisnips](https://github.com/SirVer/ultisnips) is used.
+
+If your vim hasn't python enabled then
+[neosnippet](https://github.com/Shougo/neosnippet.vim) is used and
+[neosnippet-snippets](https://github.com/Shougo/neosnippet-snippets/).
+
+In any case [honza/vim-snippets](https://github.com/honza/vim-snippets) are used
+as snippets.
+
+* `<C-k>` expands snippets
+
 ### [fugitive](http://github.com/tpope/vim-fugitive)
 
 A Git wrapper so awesome, it should be illegal:
