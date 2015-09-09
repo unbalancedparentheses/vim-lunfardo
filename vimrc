@@ -354,9 +354,6 @@ Plug 'rstacruz/sparkup'
 " autocomplete
 "-------------
 
-" perform all your vim insert mode completions with tab
-Plug 'ervandew/supertab'
-
 if has('lua') || has("patch-7.3-885")
   Plug 'Shougo/neocomplete.vim'
   let g:neocomplete#enable_at_startup = 1
@@ -368,21 +365,37 @@ else
   let g:neocomplcache_enable_fuzzy_completion = 1
 endif
 
+" snippets
+"---------
+
+if has('python')
+  " Track the engine.
+  Plug 'SirVer/ultisnips'
+  " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+  let g:UltiSnipsExpandTrigger="<C-k>"
+  let g:UltiSnipsJumpForwardTrigger="<tab>"
+  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+  " If you want :UltiSnipsEdit to split your window.
+  let g:UltiSnipsEditSplit="vertical"
+else
+  Plug 'Shougo/neosnippet.vim'
+  " enable snipMate compatibility feature
+  let g:neosnippet#enable_snipmate_compatibility = 1
+  let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets,~/.vim/plugged/neosnippet-snippets/neosnippets'
+  imap <C-k> <Plug>(neosnippet_expand_or_jump)
+  smap <C-k> <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k> <Plug>(neosnippet_expand_target)
+
+  " neosnippet snippets
+  Plug 'Shougo/neosnippet-snippets'
+endif
+
 " snippets files for various programming languages
 Plug 'honza/vim-snippets'
 
-" adds snippet support
-Plug 'Shougo/neosnippet.vim'
-" enable snipMate compatibility feature
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" neosnippet snippets
-Plug 'Shougo/neosnippet-snippets'
-
+" perform all your vim insert mode completions with tab
+Plug 'ervandew/supertab'
 
 " colorschemes
 "-------------
