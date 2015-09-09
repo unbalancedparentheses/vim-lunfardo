@@ -73,6 +73,7 @@ nnoremap <Leader>w :w<CR>
 
 " quit
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :q!<CR>
 
 " save and quit
 nnoremap <Leader>x :x<CR>
