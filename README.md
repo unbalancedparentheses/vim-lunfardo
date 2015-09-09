@@ -46,16 +46,6 @@ Here're some tips in case you've never used VIM before:
 
 ## Plugins
 
-### [dwm](https://github.com/spolu/dwm.vim)
-
-Tiled Window Management for Vim:
-
-* `<C-n>` Creates a new window and place it in the master pane [M] & stacks all previous windows in the stacked pane [S]
-* `<C-c>` Close the current window if no unsaved changes
-* `<C-j>` Jumps to next window (clockwise)
-* `<C-k>` Jumps to previous window (anti-clockwise)
-* `<C-Space>` Focus the current window, that is, place it in the master pane [M] & stacks all other windows in the stacked pane [S]
-
 ### [CtrlP](https://github.com/kien/ctrlp.vim)
 
 Fuzzy file, buffer, mru and tag finder:
@@ -70,6 +60,24 @@ Fuzzy file, buffer, mru and tag finder:
 * `<C-n>`, `<C-p>` to select the next/previous string in the prompt's history
 * `<C-y>` to create a new file and its parent directories
 * `<c-z>` to mark/unmark multiple files and <c-o> to open them
+
+### Yank ring
+
+* `<Space-y>` yank menu
+
+### Command line history
+
+* `<Space-c>` command history
+
+### [dwm](https://github.com/spolu/dwm.vim)
+
+Tiled Window Management for Vim:
+
+* `<C-n>` Creates a new window and place it in the master pane [M] & stacks all previous windows in the stacked pane [S]
+* `<C-c>` Close the current window if no unsaved changes
+* `<C-j>` Jumps to next window (clockwise)
+* `<C-k>` Jumps to previous window (anti-clockwise)
+* `<C-Space>` Focus the current window, that is, place it in the master pane [M] & stacks all other windows in the stacked pane [S]
 
 ### [BufferGator](https://github.com/jeetsukumaran/vim-buffergator)
 
