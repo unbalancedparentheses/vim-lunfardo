@@ -147,10 +147,31 @@ let g:startify_change_to_vcs_root = 1
 let g:startify_show_sessions = 1
 nnoremap <F1> :Startify<cr>
 
-" Fuzzy file, buffer, mru, tag, etc finder
+" fuzzy file, buffer, mru, tag, etc finder
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+                \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+                \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+
+if executable('ag')
+  let s:ctrlp_fallback = 'ag %s --nocolor -l -g ""'
+  let g:ctrlp_use_caching = 0
+elseif executable('ack')
+  let s:ctrlp_fallback = 'ack %s --nocolor -f'
+" On windows use "dir" as fallback command
+elseif WINDOWS()
+  let s:ctrlp_fallback = 'dir %s /-n /b /s /a-d'
+else
+  let s:ctrlp_fallback = 'find %s -type f'
+endif
+
+" yank and commands history thanks to ctrlp
+Plug 'sgur/ctrlp-extensions.vim'
+nnoremap <leader>y :CtrlPYankring<cr>
+nnoremap <leader>c :CtrlPCmdline<cr>
 
 " list, select and switch between buffers
 Plug 'jeetsukumaran/vim-buffergator'
@@ -200,10 +221,6 @@ Plug 'chrisbra/NrrwRgn'
 
 " vim alignment plugin
 Plug 'junegunn/vim-easy-align'
-
-" helps to end certain structures automatically
-" for example in Ruby, this means adding end after if, do, def and several other keywords.
-Plug 'tpope/vim-endwise'
 
 " start search for visual mode
 Plug 'thinca/vim-visualstar'
@@ -339,6 +356,9 @@ if exists(":SyntasticInfo")
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
 endif
+
+" helps to end certain structures automatically
+Plug 'tpope/vim-endwise'
 
 " python
 Plug 'klen/python-mode'
