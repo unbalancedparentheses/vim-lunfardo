@@ -6,6 +6,14 @@ call plug#begin('~/.vim/plugged')
 " basic settings
 "---------------
 
+" gvim without unnecessary things
+if has('gui_running')
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=L  "remove left-hand scroll bar
+endif
+
 scriptencoding utf-8
 
 " disable strange vi defaults
