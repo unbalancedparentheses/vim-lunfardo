@@ -80,24 +80,25 @@ Selected buffers can be "previewed", i.e. opened in a window or tab page, but wi
 ### Autocomplete
 
 If your vim has lua enabled and the patch version is bigger than patch-7.3-885
-then [neocomplete](https://github.com/Shougo/neocomplete.vim) is used.
+then [neocomplete](https://github.com/Shougo/neocomplete.vim) is used for autocomplete.
 
 If your vim hasn't lua enabled then
-[neocomplcache](https://github.com/Shougo/neocomplcache.vim) is used.
+[neocomplcache](https://github.com/Shougo/neocomplcache.vim) is used for autocomplete.
 
 * `<Tab>` autocompletes
 
 ### Snippets
 
 If your vim has python enabled then
-[ultisnips](https://github.com/SirVer/ultisnips) is used.
+[ultisnips](https://github.com/SirVer/ultisnips) is used for inserting snippets.
 
 If your vim hasn't python enabled then
-[neosnippet](https://github.com/Shougo/neosnippet.vim) is used and
-[neosnippet-snippets](https://github.com/Shougo/neosnippet-snippets/).
+[neosnippet](https://github.com/Shougo/neosnippet.vim) is used for inserting snippets.
 
-In any case [honza/vim-snippets](https://github.com/honza/vim-snippets) are used
+In any case, [honza/vim-snippets](https://github.com/honza/vim-snippets) are used
 as snippets.
+
+If *neosnippet* snippets engine is used then also [neosnippet-snippets](https://github.com/Shougo/neosnippet-snippets/) are used as snippets.
 
 * `<C-k>` expands snippets
 
