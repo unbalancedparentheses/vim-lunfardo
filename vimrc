@@ -354,7 +354,7 @@ Plug 'rstacruz/sparkup'
 " autocomplete
 "-------------
 
-if has('lua') || has("patch-7.3-885")
+if has('lua') && has("patch-7.3-885")
   Plug 'Shougo/neocomplete.vim'
   let g:neocomplete#enable_at_startup = 1
   let g:neocomplete#data_directory = '~/.vim/cache/plugins/neocomplete'
@@ -369,20 +369,19 @@ endif
 "---------
 
 if has('python')
-  " Track the engine.
+  " track the engine
   Plug 'SirVer/ultisnips'
-  " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+  " trigger configuration
   let g:UltiSnipsExpandTrigger="<C-k>"
   let g:UltiSnipsJumpForwardTrigger="<tab>"
   let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-  " If you want :UltiSnipsEdit to split your window.
+  " if you want :UltiSnipsEdit to split your window
   let g:UltiSnipsEditSplit="vertical"
 else
   Plug 'Shougo/neosnippet.vim'
   " enable snipMate compatibility feature
   let g:neosnippet#enable_snipmate_compatibility = 1
-  let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets,~/.vim/plugged/neosnippet-snippets/neosnippets'
   imap <C-k> <Plug>(neosnippet_expand_or_jump)
   smap <C-k> <Plug>(neosnippet_expand_or_jump)
   xmap <C-k> <Plug>(neosnippet_expand_target)
