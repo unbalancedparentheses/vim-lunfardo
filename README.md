@@ -63,11 +63,11 @@ Fuzzy file, buffer, mru and tag finder:
 
 ### Yank ring
 
-* `<Space-y>` yank menu
+* `<Space-y>` Yank menu
 
 ### Command line history
 
-* `<Space-c>` command history
+* `<Space-c>` Command history
 
 ### [dwm](https://github.com/spolu/dwm.vim)
 
@@ -84,6 +84,12 @@ Tiled Window Management for Vim:
 Buffergator is a plugin for listing, navigating between, and selecting buffers to edit. Upon invocation (using the command, :BuffergatorOpen or BuffergatorToggle, or the provided key mapping, <Leader>b), a catalog of listed buffers are displayed in a separate new window split (vertical or horizontal, based on user options; default = vertical). From this "buffer catalog", a buffer can be selected and opened in an existing window, a new window split (vertical or horizontal), or a new tab page.
 
 Selected buffers can be "previewed", i.e. opened in a window or tab page, but with focus remaining in the buffer catalog. Even better, you can "walk" up and down the list of buffers shown in the catalog by using <C-N> (or <SPACE>) / <C-P> (or <C-SPACE>). These keys select the next/previous buffer in succession, respectively, opening it for preview without leaving the buffer catalog viewer.
+
+### [ferret](https://github.com/wincent/ferret)
+Ferret provides an :Ack command for searching across multiple files using The Silver Searcher, Ack, or Grep. Support for passing options through to the underlying search command exists, along with the ability to use full regular expression syntax without doing special escaping.
+
+* `<leader>a` Search prompt
+* `<leader>s` Search for the word currently under the cursor
 
 ### Autocomplete
 
