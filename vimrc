@@ -161,9 +161,6 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 elseif executable('ack')
   let s:ctrlp_fallback = 'ack %s --nocolor -f'
-" On windows use "dir" as fallback command
-elseif WINDOWS()
-  let s:ctrlp_fallback = 'dir %s /-n /b /s /a-d'
 else
   let s:ctrlp_fallback = 'find %s -type f'
 endif
