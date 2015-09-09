@@ -173,6 +173,9 @@ nnoremap <leader>c :CtrlPCmdline<cr>
 " list, select and switch between buffers
 Plug 'jeetsukumaran/vim-buffergator'
 
+" search using ag, ack or grep
+Plug 'wincent/ferret'
+
 " tree explorer
 Plug 'scrooloose/nerdtree'
 map <Leader>e :NERDTreeToggle<CR>
