@@ -50,10 +50,10 @@ Here're some tips in case you've never used VIM before:
 
 Tiled Window Management for Vim:
 
-* `<C-d>` Creates a new window and place it in the master pane [M] & stacks all previous windows in the stacked pane [S]
-* `<C-d>` Close the current window if no unsaved changes
+* `<C-n>` Creates a new window and place it in the master pane [M] & stacks all previous windows in the stacked pane [S]
+* `<C-c>` Close the current window if no unsaved changes
 * `<C-j>` Jumps to next window (clockwise)
-* `<C-j>` Jumps to previous window (anti-clockwise)
+* `<C-k>` Jumps to previous window (anti-clockwise)
 * `<C-Space>` Focus the current window, that is, place it in the master pane [M] & stacks all other windows in the stacked pane [S]
 
 ### [CtrlP](https://github.com/kien/ctrlp.vim)
