@@ -180,6 +180,9 @@ Plug 'wincent/ferret'
 Plug 'scrooloose/nerdtree'
 map <Leader>e :NERDTreeToggle<CR>
 
+Plug 'Shougo/vimproc.vim', {'do': 'make'}
+Plug 'Shougo/vimshell.vim'
+
 " highlight unwanted whitespace
 Plug 'ntpeters/vim-better-whitespace'
 
