@@ -46,6 +46,10 @@ Here're some tips in case you've never used VIM before:
 
 ## Plugins
 
+### jumplist
+* `<C-o>` jump back to the previous (older) location
+* `<C->` jump forward to the next (newer) location
+
 ### [CtrlP](https://github.com/kien/ctrlp.vim)
 
 Fuzzy file, buffer, mru and tag finder:
