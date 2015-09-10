@@ -127,6 +127,12 @@ A Git wrapper so awesome, it should be illegal:
 * `<leader>gc` maps to :Gcommit<CR>
 * `<leader>gp` maps to :Git push<CR>
 
+### [vimshell](https://github.com/Shougo/vimshell.vim)
+
+Powerful shell implemented by vim
+
+* `<leader>S` opens shell
+
 # Inspiration
 
 - [spf13-vim](https://github.com/spf13/spf13-vim)
