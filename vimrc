@@ -178,10 +178,12 @@ Plug 'wincent/ferret'
 
 " tree explorer
 Plug 'scrooloose/nerdtree'
-map <Leader>e :NERDTreeToggle<CR>
+nnoremap <Leader>e :NERDTreeToggle<CR>
 
+" shell inside vim
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'Shougo/vimshell.vim'
+nnoremap <Leader>S :VimShell<CR>
 
 " highlight unwanted whitespace
 Plug 'ntpeters/vim-better-whitespace'
