@@ -187,6 +187,9 @@ nnoremap <Leader>S :VimShell<CR>
 
 " highlight unwanted whitespace
 Plug 'ntpeters/vim-better-whitespace'
+" strip all trailing whitespace everytime you save the file for all file types
+autocmd BufWritePre * StripWhitespace
+let g:better_whitespace_filetypes_blacklist = []
 
 " v to expand the visual selection and C-v to shrink it.
 Plug 'terryma/vim-expand-region'
