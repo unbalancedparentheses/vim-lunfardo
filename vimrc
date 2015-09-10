@@ -249,18 +249,6 @@ Plug 'tpope/vim-surround'
 " insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
-
-" tabs and indentation
-"---------------------
-
-" number of visual spaces per TAB
-set tabstop=2
-" number of spaces in tab when editing
-set softtabstop=2
-" turn <TAB>s into spaces
-set expandtab
-" number of spaces to add when  you press >>, << or ==
-set shiftwidth=2
 " automatically inserts one extra level of indentation in some cases, and works for C-like files.
 set autoindent
 
