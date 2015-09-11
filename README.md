@@ -32,7 +32,9 @@ Here're some tips in case you've never used VIM before:
 * Type `vimtutor` into a shell to go through a brief interactive
   tutorial inside VIM.
 * Watch the screencasts at [vimcasts.org](http://vimcasts.org/)
+* Read [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)
 * Watch Derek Wyatt's energetic tutorial videos at [his site](http://derekwyatt.org/vim/tutorials/)
+* Read [Why do Vim experts prefer buffers over tabs?](https://stackoverflow.com/questions/26708822/why-do-vim-experts-prefer-buffers-over-tabs)
 * Read wycats' perspective on learning Vim at
   [Everyone who tried to convince me to use vim was wrong](http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/)
 * Read this and other answers to a question about vim at StackOverflow:
@@ -151,12 +153,32 @@ Syntax checking hacks for vim
 
 * `<F3>` checks and shows warnings and errors
 
-###[vim-autoformat](https://github.com/Chiel92/vim-autoformat)
+###[autoformat](https://github.com/Chiel92/vim-autoformat)
 
 Provide easy code formatting in Vim by integrating existing code formatters
 
 * `<F4>` autoformats code
 
+### [easy-align](https://github.com/junegunn/vim-easy-align)
+
+![](https://raw.githubusercontent.com/junegunn/i/master/vim-easy-align.gif)
+
+With the following lines of text
+```
+apple   =red
+grass+=green
+sky-=   blue
+```
+Try these commands:
+- `vip<Enter>=`
+    - `v`isual-select `i`nner `p`aragraph
+    - Start EasyAlign command (`<Enter>`)
+    - Align around `=`
+- `gaip=`
+    - Start EasyAlign command (`ga`) for `i`nner `p`aragraph
+    - Align around `=`
+
+Notice that the commands are repeatable with `.`
 
 # Inspiration
 
