@@ -400,7 +400,10 @@ endif
 Plug 'tpope/vim-endwise'
 
 if executable('clang')
+  " async clang completion
   Plug 'osyo-manga/vim-marching'
+  " syntax highlighting for C++ (including C++11/14)
+  Plug 'octol/vim-cpp-enhanced-highlight'
 endif
 
 " python
@@ -413,6 +416,12 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-rails'
+
+" go
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
+Plug 'fatih/vim-go'
+" format with goimports instead of gofmt
+let g:go_fmt_command = "goimports"
 
 " json
 Plug 'elzr/vim-json'
