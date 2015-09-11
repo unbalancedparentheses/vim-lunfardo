@@ -240,6 +240,10 @@ Plug 'chrisbra/NrrwRgn'
 
 " vim alignment plugin
 Plug 'junegunn/vim-easy-align'
+" start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " start search for visual mode
 Plug 'thinca/vim-visualstar'
