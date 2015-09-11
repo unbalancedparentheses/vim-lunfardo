@@ -399,6 +399,10 @@ endif
 " helps to end certain structures automatically
 Plug 'tpope/vim-endwise'
 
+if executable('clang')
+  Plug 'osyo-manga/vim-marching'
+endif
+
 " python
 Plug 'klen/python-mode'
 
@@ -466,6 +470,7 @@ Plug 'honza/vim-snippets'
 
 " perform all your vim insert mode completions with tab
 Plug 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = "context"
 
 " colorschemes
 "-------------
