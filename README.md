@@ -50,9 +50,17 @@ Here're some tips in case you've never used VIM before:
 * `<C-o>` jump back to the previous (older) location
 * `<C-i>` jump forward to the next (newer) location
 
+###[vim-sleuth](https://github.com/tpope/vim-sleuth)
+This plugin automatically adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file, or, in the case the current file is new, blank, or otherwise insufficient, by looking at other files of the same type in the current and parent directories.
+
+### indent and unindent
+
+* <Tab> in visual mode indent select lines
+* <S-Tab> in visual mode unindent select lines
+
 ### [CtrlP](https://github.com/kien/ctrlp.vim)
 
-Fuzzy file, buffer, mru and tag finder:
+Fuzzy file, buffer, mru and tag finder
 
 * `<Space-p>` invokes CtrlP
 * `<F5>` to purge the cache for the current directory to get new files, remove deleted files and apply new ignore options
@@ -136,6 +144,19 @@ A Git wrapper so awesome, it should be illegal:
 Powerful shell implemented by vim
 
 * `<leader>S` opens shell
+
+### [syntastic](https://github.com/scrooloose/syntastic)
+
+Syntax checking hacks for vim
+
+* `<F3>` checks and shows warnings and errors
+
+###[vim-autoformat](https://github.com/Chiel92/vim-autoformat)
+
+Provide easy code formatting in Vim by integrating existing code formatters
+
+* `<F4>` autoformats code
+
 
 # Inspiration
 
