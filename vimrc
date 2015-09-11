@@ -416,10 +416,7 @@ let g:go_fmt_command = "goimports"
 Plug 'jimenezrick/vimerl'
 
 " python
-Plug 'klen/python-mode'
-
-" javascript
-Plug 'pangloss/vim-javascript'
+Plug 'davidhalter/jedi-vim'
 
 " ruby
 Plug 'vim-ruby/vim-ruby'
@@ -433,10 +430,18 @@ Plug 'elzr/vim-json'
 Plug 'plasticboy/vim-markdown'
 
 " html
+
+" omnicomplete and syntax
+Plug 'othree/html5.vim'
+
+" a parser for a condensed HTML format
 Plug 'rstacruz/sparkup'
 
 " highlights the matching HTML tag when the cursor is positioned on a tag
 Plug 'gregsexton/MatchTag'
+
+" javascript
+Plug 'pangloss/vim-javascript'
 
 " autocomplete
 "-------------
