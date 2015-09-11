@@ -159,8 +159,8 @@ let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
-                \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-                \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+      \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
 
 if executable('ag')
   let s:ctrlp_fallback = 'ag %s --nocolor -l -g ""'
@@ -357,6 +357,9 @@ if exists(":SyntasticInfo")
   let g:syntastic_auto_loc_list = 1
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
+  let g:syntastic_error_symbol = "✗"
+  let g:syntastic_warning_symbol = "⚠"
+  nnoremap <F4> :Errors<cr>
 endif
 
 Plug 'Chiel92/vim-autoformat'
