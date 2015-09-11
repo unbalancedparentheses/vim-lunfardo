@@ -359,11 +359,11 @@ if exists(":SyntasticInfo")
   let g:syntastic_check_on_wq = 0
   let g:syntastic_error_symbol = "✗"
   let g:syntastic_warning_symbol = "⚠"
-  noremap <F4> :SyntasticCheck <bar> :Errors<CR>
 endif
+nnoremap <F3> <ESC>:SyntasticCheck<CR>:Errors<CR>
 
 Plug 'Chiel92/vim-autoformat'
-noremap <F3> :Autoformat<CR>
+nnoremap <F4> :Autoformat<CR>
 
 " helps to end certain structures automatically
 Plug 'tpope/vim-endwise'
