@@ -359,7 +359,7 @@ if exists(":SyntasticInfo")
   let g:syntastic_check_on_wq = 0
   let g:syntastic_error_symbol = "✗"
   let g:syntastic_warning_symbol = "⚠"
-  nnoremap <F4> :Errors<cr>
+  noremap <F4> :SyntasticCheck <bar> :Errors<CR>
 endif
 
 Plug 'Chiel92/vim-autoformat'
