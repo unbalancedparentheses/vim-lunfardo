@@ -161,7 +161,7 @@ nnoremap <F1> :Startify<cr>
 " fuzzy file, buffer, mru, tag, etc finder
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_map = '<Leader>p'
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$',
