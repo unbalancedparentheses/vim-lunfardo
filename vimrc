@@ -332,8 +332,8 @@ set laststatus=2
 " lean and mean status/tabline for vim that's light as air
 Plug  'bling/vim-airline'
 
-" git
-"----
+" source control management
+"--------------------------
 
 " vim git interface
 Plug 'tpope/vim-fugitive'
@@ -344,8 +344,17 @@ nmap <leader>gl :Glog<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gp :Git push<CR>
 
+" gitk for vim
+Plug 'gregsexton/gitv'
+nmap <leader>gv :Gitv<CR>
+
 " git diff in each line
 Plug 'airblade/vim-gitgutter'
+
+" vim mercurial interface
+if executable('hg')
+  Plug 'ludovicchabant/vim-lawrencium'
+endif
 
 " gist
 Plug 'mattn/webapi-vim'
@@ -409,6 +418,9 @@ Plug 'plasticboy/vim-markdown'
 
 " html
 Plug 'rstacruz/sparkup'
+
+" highlights the matching HTML tag when the cursor is positioned on a tag
+Plug 'gregsexton/MatchTag'
 
 " autocomplete
 "-------------
