@@ -137,6 +137,19 @@ Powerful shell implemented by vim
 
 * `<leader>S` opens shell
 
+### [syntastic](https://github.com/scrooloose/syntastic)
+
+Syntax checking hacks for vim
+
+* `<F3>` checks and shows warnings and errors
+
+###[vim-autoformat](https://github.com/Chiel92/vim-autoformat)
+
+Provide easy code formatting in Vim by integrating existing code formatters
+
+* `<F4>` autoformats code
+
+
 # Inspiration
 
 - [spf13-vim](https://github.com/spf13/spf13-vim)
