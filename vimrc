@@ -97,10 +97,15 @@ Plug 'tpope/vim-unimpaired'
 
 set pastetoggle=<F2>
 
+" move lines up and down
 nmap <c-up> [e
 nmap <c-down> ]e
 vmap <c-down> ]egv
 vmap <c-up> [egv
+
+" indent or unindent selected lines with tab
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " readline key bindings
 Plug 'tpope/vim-rsi'
