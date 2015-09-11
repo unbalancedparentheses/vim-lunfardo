@@ -122,8 +122,8 @@ Plug 'terryma/vim-smooth-scroll'
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 8)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 8)<CR>
 
-" window management like dwm
-Plug 'spolu/dwm.vim'
+" window management
+Plug 'zhaocai/GoldenView.Vim'
 
 " editor
 "-------
