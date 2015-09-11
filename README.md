@@ -83,15 +83,14 @@ Fuzzy file, buffer, mru and tag finder
 
 * `<Space-c>` Command history
 
-### [dwm](https://github.com/spolu/dwm.vim)
+### [GoldenView](https://github.com/zhaocai/GoldenView.Vim)
 
-Tiled Window Management for Vim:
-
-* `<C-n>` Creates a new window and place it in the master pane [M] & stacks all previous windows in the stacked pane [S]
-* `<C-c>` Close the current window if no unsaved changes
-* `<C-j>` Jumps to next window (clockwise)
-* `<C-k>` Jumps to previous window (anti-clockwise)
-* `<C-Space>` Focus the current window, that is, place it in the master pane [M] & stacks all other windows in the stacked pane [S]
+Tiled Window Management for Vim with golden view ratio rule forced by autoresize:
+* `<C-L>` split window
+* `<F8>` switch current window with the main pane
+* `<S-F8>` toggle back current window with the main pan
+* `<C-n>` next window
+* `<C-p>` previous window 
 
 ### [BufferGator](https://github.com/jeetsukumaran/vim-buffergator)
 
