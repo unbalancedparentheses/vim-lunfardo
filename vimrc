@@ -181,6 +181,9 @@ Plug 'sgur/ctrlp-extensions.vim'
 nnoremap <leader>y :CtrlPYankring<cr>
 nnoremap <leader>c :CtrlPCmdline<cr>
 
+" show the list of buffers in the command bar
+Plug 'bling/vim-bufferline'
+
 " list, select and switch between buffers
 Plug 'jeetsukumaran/vim-buffergator'
 
