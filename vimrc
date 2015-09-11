@@ -418,7 +418,6 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-rails'
 
 " go
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
 Plug 'fatih/vim-go'
 " format with goimports instead of gofmt
 let g:go_fmt_command = "goimports"
