@@ -32,7 +32,9 @@ Here're some tips in case you've never used VIM before:
 * Type `vimtutor` into a shell to go through a brief interactive
   tutorial inside VIM.
 * Watch the screencasts at [vimcasts.org](http://vimcasts.org/)
+* Read [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)
 * Watch Derek Wyatt's energetic tutorial videos at [his site](http://derekwyatt.org/vim/tutorials/)
+* Read [Why do Vim experts prefer buffers over tabs?](https://stackoverflow.com/questions/26708822/why-do-vim-experts-prefer-buffers-over-tabs)
 * Read wycats' perspective on learning Vim at
   [Everyone who tried to convince me to use vim was wrong](http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/)
 * Read this and other answers to a question about vim at StackOverflow:
