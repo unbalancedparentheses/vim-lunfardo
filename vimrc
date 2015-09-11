@@ -399,12 +399,21 @@ endif
 " helps to end certain structures automatically
 Plug 'tpope/vim-endwise'
 
+" C, C++
 if executable('clang')
   " async clang completion
   Plug 'osyo-manga/vim-marching'
   " syntax highlighting for C++ (including C++11/14)
   Plug 'octol/vim-cpp-enhanced-highlight'
 endif
+
+" go
+Plug 'fatih/vim-go'
+" format with goimports instead of gofmt
+let g:go_fmt_command = "goimports"
+
+" erlang
+Plug 'jimenezrick/vimerl'
 
 " python
 Plug 'klen/python-mode'
@@ -416,11 +425,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-rails'
-
-" go
-Plug 'fatih/vim-go'
-" format with goimports instead of gofmt
-let g:go_fmt_command = "goimports"
 
 " json
 Plug 'elzr/vim-json'
@@ -479,6 +483,9 @@ Plug 'honza/vim-snippets'
 " perform all your vim insert mode completions with tab
 Plug 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
 " colorschemes
 "-------------
