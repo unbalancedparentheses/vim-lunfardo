@@ -217,7 +217,7 @@ nnoremap <Leader>u :UndotreeToggle<cr>
 
 if has('persistent_undo')
   " where to save undo histories
-  set undodir=$HOME/.vim/undo
+  set undodir=~/.vim/undo
   " so is persistent undo
   set undofile
   " maximum number of changes that can be undone
@@ -306,7 +306,7 @@ set matchtime=2
 " visual autocomplete for command menu
 set wildmenu
 " bash tab style completion is awesome
-set wildmode=longest,list
+set wildmode=list:longest,full
 " tab completion key
 set wildchar=<tab>
 
@@ -466,4 +466,5 @@ Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 set background=dark
+set t_Co=256
 silent! colorscheme PaperColor
