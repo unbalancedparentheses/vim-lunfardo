@@ -53,6 +53,12 @@ set nowritebackup
 " no swap files
 set noswapfile
 
+" if a pattern contains an uppercase letter, it is case sensitive,
+" otherwise, it is not
+set ignorecase
+set infercase
+set smartcase
+
 " good defaults
 Plug 'tpope/vim-sensible'
 
@@ -352,6 +358,9 @@ if exists(":SyntasticInfo")
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
 endif
+
+Plug 'Chiel92/vim-autoformat'
+noremap <F3> :Autoformat<CR>
 
 " helps to end certain structures automatically
 Plug 'tpope/vim-endwise'
