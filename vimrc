@@ -370,6 +370,16 @@ nnoremap <F3> <ESC>:SyntasticCheck<CR>:Errors<CR>
 Plug 'Chiel92/vim-autoformat'
 nnoremap <F4> :Autoformat<CR>
 
+if executable("ctags")
+  Plug 'xolox/vim-misc'
+  Plug 'xolox/vim-easytags'
+  let g:easytags_file = '~/.vim/tags'
+  nnoremap <F5> :UpdateTags<CR>
+
+  Plug 'majutsushi/tagbar'
+  nmap <F6> :TagbarToggle<CR>
+endif
+
 " helps to end certain structures automatically
 Plug 'tpope/vim-endwise'
 
