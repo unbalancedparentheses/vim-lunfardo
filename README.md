@@ -151,12 +151,32 @@ Syntax checking hacks for vim
 
 * `<F3>` checks and shows warnings and errors
 
-###[vim-autoformat](https://github.com/Chiel92/vim-autoformat)
+###[autoformat](https://github.com/Chiel92/vim-autoformat)
 
 Provide easy code formatting in Vim by integrating existing code formatters
 
 * `<F4>` autoformats code
 
+### [easy-align](https://github.com/junegunn/vim-easy-align)
+
+![](https://raw.githubusercontent.com/junegunn/i/master/vim-easy-align.gif)
+
+With the following lines of text
+```
+apple   =red
+grass+=green
+sky-=   blue
+```
+Try these commands:
+- `vip<Enter>=`
+    - `v`isual-select `i`nner `p`aragraph
+    - Start EasyAlign command (`<Enter>`)
+    - Align around `=`
+- `gaip=`
+    - Start EasyAlign command (`ga`) for `i`nner `p`aragraph
+    - Align around `=`
+
+Notice that the commands are repeatable with `.`
 
 # Inspiration
 
