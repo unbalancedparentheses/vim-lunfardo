@@ -461,7 +461,9 @@ Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
 Plug 'notpratheek/vim-luna'
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
-silent! colorscheme Tomorrow-Night
+set background=dark
+silent! colorscheme PaperColor
