@@ -26,7 +26,6 @@ curl -L https://raw.githubusercontent.com/unbalancedparentheses/vim-lunfardo/mas
 Here're some tips in case you've never used VIM before:
 
 * [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
-* Read [Why Atom Can’t Replace Vim](https://medium.com/@mkozlows/why-atom-cant-replace-vim-433852f4b4d1)
 * Play [vim adventures](http://vim-adventures.com/)
 * Type `vimtutor` into a shell to go through a brief interactive
   tutorial inside VIM.
